@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/*this make visual the changes of the functions on the top bar of the editor*/
+
+.ProseMirror {
+  min-height: 120px;
+  outline: none;
+  padding: 0.5em;
+  background: white;
+  border-radius: 0.5em;
+}
+
+.ProseMirror h1 { font-size: 2rem; font-weight: bold; margin: 1em 0 0.5em 0; }
+.ProseMirror h2 { font-size: 1.5rem; font-weight: bold; margin: 1em 0 0.5em 0; }
+.ProseMirror h3 { font-size: 1.2rem; font-weight: bold; margin: 1em 0 0.5em 0; }
+
+.ProseMirror ul,
+.ProseMirror ol {
+  padding-left: 2em;
+  margin: 1em 0;
+  list-style-position: outside;
+}
+
+.ProseMirror ul {
+  list-style-type: disc;
+}
+
+.ProseMirror ol {
+  list-style-type: decimal;
+}
+
+.ProseMirror li {
+  margin: 0.25em 0;
+  display: list-item;
+}
+
+/*this was to fix some bug of the line that interrupts the text when another user is typing in the middle of the text.... i couldn't fix it :( */
+.tiptap-collaboration-cursor__label {
+  display: none !important;
+}
+
+.tiptap-collaboration-cursor__caret {
+  width: 2px !important;
+  min-width: 2px !important;
+  max-width: 2px !important;
+  border-radius: 2px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-shadow: none !important;
+}
+
+.tiptap-collaboration-cursor__selection {
+  background: none !important;
+}
+
+.tiptap-collaboration-cursor__label,
+.tiptap-collaboration-cursor__name,
+.tiptap-collaboration-cursor__user,
+.tiptap-collaboration-cursor__info {
+  display: none !important;
+}
+
+.tiptap-collaboration-cursor__caret {
+  display: inline !important;
+  position: absolute !important;
+  pointer-events: none !important;
+  width: 2px !important;
+  min-width: 2px !important;
+  max-width: 2px !important;
+  border-radius: 2px !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  z-index: 10 !important;
+}
+
+.tiptap-collaboration-cursor {
+  display: contents !important;
+  position: static !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+}
